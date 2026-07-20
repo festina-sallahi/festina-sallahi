@@ -1,6 +1,6 @@
 // Renders the data-driven sections (journey, projects, skills) and wires up
-// the small bits of interactivity: mobile nav toggle, smooth scroll, and
-// active-link highlighting while scrolling.
+// the small bits of interactivity: mobile nav toggle, smooth scroll,
+// active-link highlighting while scrolling, and the EN/DE language toggle.
 
 // The URL hash now updates as you scroll (see initActiveSection), so a plain
 // refresh would otherwise reload straight into whatever section you were
@@ -30,6 +30,50 @@ const ICONS = {
   "check-circle": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.3 2.3 4.7-5"/></svg>',
 };
 
+// ---------- i18n ----------
+// Language is chosen via a real navigation (the EN/DE links carry
+// ?lang=en / ?lang=de, so switching reloads the page and the choice is
+// visible in the URL), not a client-side swap. English is always the
+// default — only an explicit ?lang=de switches it, nothing is remembered
+// across visits.
+
+function detectInitialLang() {
+  return new URLSearchParams(window.location.search).get("lang") === "de" ? "de" : "en";
+}
+
+const currentLang = detectInitialLang();
+
+// Static copy lookup (STATIC_I18N comes from js/i18n.js).
+function t(key) {
+  return (STATIC_I18N[currentLang] && STATIC_I18N[currentLang][key]) || STATIC_I18N.en[key] || "";
+}
+
+// Data-driven fields are either a plain string (proper nouns, same in both
+// languages) or a { en, de } object.
+function pick(field) {
+  if (field && typeof field === "object") return field[currentLang] || field.en;
+  return field;
+}
+
+function applyStaticI18n() {
+  document.documentElement.lang = currentLang;
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+    el.innerHTML = t(el.dataset.i18nHtml);
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    el.setAttribute("aria-label", t(el.dataset.i18nAria));
+  });
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === currentLang);
+  });
+}
+
+// ---------- Rendering ----------
+
 function renderJourney() {
   const list = document.getElementById("journeyList");
   list.innerHTML = JOURNEY.map(
@@ -38,12 +82,12 @@ function renderJourney() {
       <span class="timeline-icon">${ICONS[item.icon] || ""}</span>
       <span class="timeline-date">${item.date}</span>
       <div class="timeline-body">
-        <p class="timeline-title">${item.title}</p>
-        <p class="timeline-org">${item.org}</p>
+        <p class="timeline-title">${pick(item.title)}</p>
+        <p class="timeline-org">${pick(item.org)}</p>
       </div>
       <div class="timeline-text">
-        <p>${item.text}</p>
-        ${item.badge ? `<span class="timeline-badge">&#10022; ${item.badge}</span>` : ""}
+        <p>${pick(item.text)}</p>
+        ${item.badge ? `<span class="timeline-badge">&#10022; ${pick(item.badge)}</span>` : ""}
       </div>
     </li>`
   ).join("");
@@ -62,9 +106,9 @@ function renderProjects() {
         }
       </div>
       <h3>${p.title}</h3>
-      <p class="project-desc">${p.description}</p>
+      <p class="project-desc">${pick(p.description)}</p>
       <div class="project-tags">
-        ${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
+        ${p.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
       </div>
       ${
         p.ciBadge
@@ -92,10 +136,10 @@ function renderCollaborations() {
         }
       </div>
       <h3>${c.title}</h3>
-      ${c.live ? `<span class="live-badge"><span class="availability-dot" aria-hidden="true"></span>Live product</span>` : ""}
-      <p class="project-desc">${c.description}</p>
+      ${c.live ? `<span class="live-badge"><span class="availability-dot" aria-hidden="true"></span>${t("live_product")}</span>` : ""}
+      <p class="project-desc">${pick(c.description)}</p>
       <div class="project-tags">
-        ${c.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
+        ${c.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
       </div>
       <a class="project-link" href="${c.link}" target="_blank" rel="noopener">
         ${c.link.replace("https://", "")}
@@ -112,7 +156,7 @@ function renderSkills() {
     <div class="skill-group">
       <div class="skill-group-header">
         ${ICONS[group.icon] || ""}
-        <span>${group.title}</span>
+        <span>${pick(group.title)}</span>
       </div>
       <div class="skill-group-items">
         ${group.skills
@@ -122,6 +166,8 @@ function renderSkills() {
     </div>`
   ).join("");
 }
+
+// ---------- Interaction ----------
 
 function initNavToggle() {
   const toggle = document.getElementById("navToggle");
@@ -207,6 +253,7 @@ function initActiveSection() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  applyStaticI18n();
   renderJourney();
   renderProjects();
   renderCollaborations();

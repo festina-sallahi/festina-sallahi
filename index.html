@@ -19,16 +19,16 @@
         Festina Sallahi
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="aria_toggle_nav" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
       <nav class="main-nav" id="mainNav">
-        <a href="#about" class="nav-link active" data-nav="about">About</a>
-        <a href="#journey" class="nav-link" data-nav="journey">Journey</a>
-        <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
-        <a href="#collaboration" class="nav-link" data-nav="collaboration">Collaboration</a>
-        <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
+        <a href="#about" class="nav-link active" data-nav="about" data-i18n="nav_about">About</a>
+        <a href="#journey" class="nav-link" data-nav="journey" data-i18n="nav_journey">Journey</a>
+        <a href="#projects" class="nav-link" data-nav="projects" data-i18n="nav_projects">Projects</a>
+        <a href="#collaboration" class="nav-link" data-nav="collaboration" data-i18n="nav_collaboration">Collaboration</a>
+        <a href="#skills" class="nav-link" data-nav="skills" data-i18n="nav_skills">Skills</a>
         <div class="icon-link-group">
           <a href="https://github.com/festina-sallahi" class="icon-link" target="_blank" rel="noopener" aria-label="GitHub">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.15v3.19c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
@@ -38,16 +38,21 @@
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9z"/></svg>
           </a>
         </div>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <a href="?lang=en" class="lang-btn active" data-lang="en">EN</a>
+          <span class="lang-separator" aria-hidden="true">|</span>
+          <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <nav class="side-nav" id="sideNav" aria-label="Section navigation">
-    <a href="#about" class="nav-link active" data-nav="about">About</a>
-    <a href="#journey" class="nav-link" data-nav="journey">Journey</a>
-    <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
-    <a href="#collaboration" class="nav-link" data-nav="collaboration">Collaboration</a>
-    <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
+    <a href="#about" class="nav-link active" data-nav="about" data-i18n="nav_about">About</a>
+    <a href="#journey" class="nav-link" data-nav="journey" data-i18n="nav_journey">Journey</a>
+    <a href="#projects" class="nav-link" data-nav="projects" data-i18n="nav_projects">Projects</a>
+    <a href="#collaboration" class="nav-link" data-nav="collaboration" data-i18n="nav_collaboration">Collaboration</a>
+    <a href="#skills" class="nav-link" data-nav="skills" data-i18n="nav_skills">Skills</a>
   </nav>
 
   <main id="top">
@@ -56,9 +61,9 @@
     <section id="about" class="section hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <h1>Hi, I'm Festina.<br>I build software and<br>automate <span class="accent">quality.</span></h1>
+          <h1 data-i18n-html="hero_h1_html">Hi, I'm Festina.<br>I build software and<br>automate <span class="accent">quality.</span></h1>
 
-          <p class="lede">
+          <p class="lede" data-i18n="hero_lede">
             I enjoy turning complex problems into clean, reliable solutions. My path started in
             data and content, and led me to where I am today: building developer tools and test
             automation that make workflows better.
@@ -67,7 +72,7 @@
           <ul class="meta-list">
             <li>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.2-7-12a7 7 0 0 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              Kernen im Remstal, Germany
+              <span data-i18n="meta_location">Kernen im Remstal, Germany</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
@@ -76,7 +81,7 @@
           </ul>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-dark">View my projects <span class="arrow">&rarr;</span></a>
+            <a href="#projects" class="btn btn-dark"><span data-i18n="cta_view_projects">View my projects</span> <span class="arrow">&rarr;</span></a>
             <a href="https://github.com/festina-sallahi" class="btn btn-outline" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.15v3.19c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
               GitHub
@@ -89,14 +94,14 @@
         </div>
 
         <div class="hero-media">
-          <div class="hero-photo" id="heroPhoto" tabindex="0" role="button" aria-expanded="false" aria-label="Show more about Festina">
+          <div class="hero-photo" id="heroPhoto" tabindex="0" role="button" aria-expanded="false" data-i18n-aria="aria_show_more" aria-label="Show more about Festina">
             <img src="assets/Festina.png" alt="Portrait of Festina Sallahi" />
             <div class="hero-photo-overlay">
               <div class="hero-photo-quote-block">
                 <span class="quote-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7.17 6C4.87 8.16 3.5 10.9 3.5 13.5c0 3 1.87 5.5 4.5 5.5 1.93 0 3.5-1.57 3.5-3.5 0-1.66-1.17-3.04-2.73-3.38.3-1.36 1.1-2.6 2.23-3.62L7.17 6zm10 0c-2.3 2.16-3.67 4.9-3.67 7.5 0 3 1.87 5.5 4.5 5.5 1.93 0 3.5-1.57 3.5-3.5 0-1.66-1.17-3.04-2.73-3.38.3-1.36 1.1-2.6 2.23-3.62L17.17 6z"/></svg>
                 </span>
-                <p class="hero-photo-quote">Progress is built on consistency, not perfection.</p>
+                <p class="hero-photo-quote" data-i18n="hero_quote">Progress is built on consistency, not perfection.</p>
                 <span class="hero-photo-divider"></span>
               </div>
 
@@ -105,23 +110,23 @@
                   <span class="trait-badge">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-7a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h8z"/></svg>
                   </span>
-                  <span class="trait-text">Always learning</span>
+                  <span class="trait-text" data-i18n="trait_learning">Always learning</span>
                 </li>
                 <li>
                   <span class="trait-badge">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
                   </span>
-                  <span class="trait-text">Problem solver at heart</span>
+                  <span class="trait-text" data-i18n="trait_problem_solver">Problem solver at heart</span>
                 </li>
                 <li>
                   <span class="trait-badge trait-badge--mark">&lt;/&gt;</span>
-                  <span class="trait-text">Building with purpose</span>
+                  <span class="trait-text" data-i18n="trait_purpose">Building with purpose</span>
                 </li>
                 <li>
                   <span class="trait-badge">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                   </span>
-                  <span class="trait-text">Giving back &amp; empowering others</span>
+                  <span class="trait-text" data-i18n="trait_giving_back">Giving back &amp; empowering others</span>
                 </li>
               </ul>
             </div>
@@ -131,8 +136,8 @@
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 21.35s-7.5-4.6-10-8.65C.6 9.5 2.2 5.5 6 5.5c2.2 0 3.9 1.2 6 3.5 2.1-2.3 3.8-3.5 6-3.5 3.8 0 5.4 4 3.5 7.2-2.5 4.05-9.5 8.65-9.5 8.65z"/></svg>
             </span>
             <div>
-              <p class="beyond-title">Beyond code</p>
-              <p class="beyond-text">
+              <p class="beyond-title" data-i18n="beyond_title">Beyond code</p>
+              <p class="beyond-text" data-i18n="beyond_text">
                 I'm a learning mentor (2024&ndash;2026), volunteering to tutor students with
                 migrant backgrounds in German and Mathematics. Teaching and learning together is
                 something I truly enjoy.
@@ -149,10 +154,10 @@
         <div class="section-head">
           <h2>
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19.5V4.5"/></svg>
-            My Journey
+            <span data-i18n="journey_heading">My Journey</span>
           </h2>
-          <p class="section-sub">Key milestones that shaped my path into software engineering.</p>
-          <span class="pill">&#10022; Always learning. Always building.</span>
+          <p class="section-sub" data-i18n="journey_sub">Key milestones that shaped my path into software engineering.</p>
+          <span class="pill" data-i18n="journey_pill">✦ Always learning. Always building.</span>
         </div>
 
         <ol class="timeline" id="journeyList"></ol>
@@ -165,10 +170,10 @@
         <div class="section-head">
           <h2>
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-            Featured Projects
+            <span data-i18n="projects_heading">Featured Projects</span>
           </h2>
-          <p class="section-sub">Things I build to solve real problems and improve workflows.</p>
-          <a href="https://github.com/festina-sallahi" class="pill pill-link" target="_blank" rel="noopener">View all on GitHub &rarr;</a>
+          <p class="section-sub" data-i18n="projects_sub">Things I build to solve real problems and improve workflows.</p>
+          <a href="https://github.com/festina-sallahi" class="pill pill-link" target="_blank" rel="noopener" data-i18n="projects_view_all">View all on GitHub &rarr;</a>
         </div>
 
         <div class="projects-grid" id="projectsGrid"></div>
@@ -181,9 +186,9 @@
         <div class="section-head">
           <h2>
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Collaboration
+            <span data-i18n="collaboration_heading">Collaboration</span>
           </h2>
-          <p class="section-sub">A project I've contributed to alongside its owner.</p>
+          <p class="section-sub" data-i18n="collaboration_sub">A project I've contributed to alongside its owner.</p>
         </div>
 
         <div class="collab-grid" id="collabGrid"></div>
@@ -196,9 +201,9 @@
         <div class="section-head section-head--boxed">
           <h2>
             <span class="section-icon-box" aria-hidden="true">&lt;/&gt;</span>
-            Skills &amp; Tools
+            <span data-i18n="skills_heading">Skills &amp; Tools</span>
           </h2>
-          <p class="section-sub">Technologies and tools I work with.</p>
+          <p class="section-sub" data-i18n="skills_sub">Technologies and tools I work with.</p>
         </div>
 
         <div class="skills-groups" id="skillsGrid"></div>
@@ -210,8 +215,8 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-intro">
-        <p class="footer-title">Let's connect!</p>
-        <p class="footer-sub">I'm always open to discussing opportunities and interesting projects.</p>
+        <p class="footer-title" data-i18n="footer_title">Let's connect!</p>
+        <p class="footer-sub" data-i18n="footer_sub">I'm always open to discussing opportunities and interesting projects.</p>
       </div>
 
       <span class="footer-divider" aria-hidden="true"></span>
@@ -232,16 +237,17 @@
 
       <a href="assets/Festina_Sallahi_CV.pdf" class="btn footer-cv-btn" download>
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
-        Download CV (PDF)
+        <span data-i18n="footer_cv">Download CV (PDF)</span>
       </a>
     </div>
   </footer>
 
-  <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+  <button id="scrollTopBtn" class="scroll-top-btn" type="button" data-i18n-aria="aria_scroll_top" aria-label="Scroll to top">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
   </button>
 
   <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -198,6 +198,30 @@ svg { display: block; }
 }
 .icon-link:hover { background: var(--bg-alt); }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.lang-btn:hover { color: var(--ink); }
+.lang-btn.active { color: var(--ink); }
+.lang-separator { color: var(--border); font-size: 0.8rem; }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -709,6 +733,8 @@ h1 {
   .main-nav .btn { width: 100%; justify-content: center; }
   .main-nav .icon-link-group { width: 100%; justify-content: center; }
   .main-nav .icon-link { flex: 1; }
+  .main-nav .lang-toggle { width: 100%; justify-content: center; }
+  .main-nav .lang-btn { flex: 1; }
 }
 
 @media (min-width: 1440px) {
