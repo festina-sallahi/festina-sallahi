@@ -25,7 +25,7 @@ const STATIC_I18N = {
 
     beyond_title: "Beyond code",
     beyond_text:
-      "I'm a learning mentor (2024–2026), volunteering to tutor students with migrant backgrounds in German and Mathematics. Teaching and learning together is something I truly enjoy.",
+      "I'm a learning mentor (2024–2026), volunteering to tutor students with migrant backgrounds in German. Teaching and learning together is something I truly enjoy.",
 
     journey_heading: "My Journey",
     journey_sub: "Key milestones that shaped my path into software engineering.",
