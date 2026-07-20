@@ -11,8 +11,8 @@ const JOURNEY = [
     title: { en: "B.Sc. Business Information Systems", de: "B.Sc. Wirtschaftsinformatik" },
     org: "University of Passau",
     text: {
-      en: "Built a strong foundation in business processes, systems analysis and software development.",
-      de: "Legte ein solides Fundament in Geschäftsprozessen, Systemanalyse und Softwareentwicklung.",
+      en: "Started a business information systems degree, combining business processes, systems analysis, and software development.",
+      de: "Begann ein Studium der Wirtschaftsinformatik, das Geschäftsprozesse, Systemanalyse und Softwareentwicklung miteinander verbindet.",
     },
     badge: {
       en: "Software Engineering Project — Grade: 1.0 (highest possible)",
