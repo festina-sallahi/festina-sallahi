@@ -12,6 +12,17 @@ if ("scrollRestoration" in history) {
 window.scrollTo(0, 0);
 window.addEventListener("load", () => window.scrollTo(0, 0));
 
+// Apply the saved theme immediately (before DOMContentLoaded) to avoid a
+// flash of the wrong theme on load.
+const THEME_KEY = "portfolio-theme";
+
+function applyTheme(isDark) {
+  document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+  localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+}
+
+applyTheme(localStorage.getItem(THEME_KEY) === "dark");
+
 const ICONS = {
   grad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1 2.5 3 6 3s6-2 6-3v-5"/><path d="M22 9v6"/></svg>',
   chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>',
@@ -169,6 +180,14 @@ function renderSkills() {
 
 // ---------- Interaction ----------
 
+function initThemeToggle() {
+  const btn = document.getElementById("themeToggle");
+  btn.addEventListener("click", () => {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    applyTheme(!isDark);
+  });
+}
+
 function initNavToggle() {
   const toggle = document.getElementById("navToggle");
   const nav = document.getElementById("mainNav");
@@ -262,4 +281,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initActiveSection();
   initHeroPhotoToggle();
   initScrollTopButton();
+  initThemeToggle();
 });
