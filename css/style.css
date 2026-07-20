@@ -103,6 +103,13 @@ svg { display: block; }
 }
 .pill-link { cursor: pointer; }
 .pill-link:hover { background: var(--bg-alt); }
+.availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--indigo);
+  flex-shrink: 0;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -118,8 +125,6 @@ svg { display: block; }
   cursor: pointer;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--indigo); color: #fff; }
-.btn-primary:hover { background: var(--indigo-dark); }
 .btn-outline { background: var(--bg); color: var(--ink); border-color: var(--border); }
 .btn-outline:hover { background: var(--bg-alt); }
 .btn-dark { background: var(--ink); color: var(--bg); }
@@ -266,6 +271,7 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  cursor: pointer;
 }
 .hero-photo img {
   width: 100%;
@@ -287,7 +293,8 @@ h1 {
   pointer-events: none;
 }
 .hero-photo:hover .hero-photo-overlay,
-.hero-photo:focus-within .hero-photo-overlay {
+.hero-photo:focus-within .hero-photo-overlay,
+.hero-photo.is-open .hero-photo-overlay {
   opacity: 1;
 }
 
@@ -496,6 +503,15 @@ h1 {
 .project-icon { color: var(--ink); width: 38px; height: 38px; }
 .project-icon svg { width: 100%; height: 100%; }
 .project-card h3 { padding: 18px 20px 0; font-size: 1.05rem; color: var(--ink); }
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 20px 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+}
 .project-desc { padding: 10px 20px 0; font-size: 0.88rem; line-height: 1.65; flex-grow: 1; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 20px 0; }
 .tag {
@@ -507,6 +523,8 @@ h1 {
   padding: 4px 11px;
   border-radius: 999px;
 }
+.project-ci-badge { display: block; margin: 14px 20px 0; }
+.project-ci-badge img { display: block; height: 20px; }
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -521,7 +539,7 @@ h1 {
 /* ---------- Skills ---------- */
 .skills-groups {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .skill-group {
@@ -607,6 +625,35 @@ h1 {
   white-space: nowrap;
 }
 .footer-cv-btn:hover { background: var(--bg-alt); border-color: var(--ink); }
+
+/* ---------- Scroll to top ---------- */
+.scroll-top-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.scroll-top-btn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top-btn:hover { border-color: var(--ink); background: var(--bg-alt); }
+
+@media (max-width: 640px) {
+  .scroll-top-btn { right: 16px; bottom: 16px; width: 40px; height: 40px; }
+}
 
 /* ---------- Side nav (docs-style rail, full height, wide screens only) ---------- */
 .side-nav {

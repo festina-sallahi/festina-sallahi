@@ -2,6 +2,16 @@
 // the small bits of interactivity: mobile nav toggle, smooth scroll, and
 // active-link highlighting while scrolling.
 
+// The URL hash now updates as you scroll (see initActiveSection), so a plain
+// refresh would otherwise reload straight into whatever section you were
+// last on. Force it back to the top instead — the hash is a "where am I"
+// tracker, not a deliberate deep link the user typed.
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+window.scrollTo(0, 0);
+window.addEventListener("load", () => window.scrollTo(0, 0));
+
 const ICONS = {
   grad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1 2.5 3 6 3s6-2 6-3v-5"/><path d="M22 9v6"/></svg>',
   chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>',
@@ -56,6 +66,11 @@ function renderProjects() {
       <div class="project-tags">
         ${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
       </div>
+      ${
+        p.ciBadge
+          ? `<a class="project-ci-badge" href="${p.ciLink}" target="_blank" rel="noopener"><img src="${p.ciBadge}" alt="${p.title} build status" /></a>`
+          : ""
+      }
       <a class="project-link" href="${p.link}" target="_blank" rel="noopener">
         ${p.link.replace("https://", "")}
         <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
@@ -77,6 +92,7 @@ function renderCollaborations() {
         }
       </div>
       <h3>${c.title}</h3>
+      ${c.live ? `<span class="live-badge"><span class="availability-dot" aria-hidden="true"></span>Live product</span>` : ""}
       <p class="project-desc">${c.description}</p>
       <div class="project-tags">
         ${c.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
@@ -122,15 +138,49 @@ function initNavToggle() {
   });
 }
 
+function initHeroPhotoToggle() {
+  const heroPhoto = document.getElementById("heroPhoto");
+  const toggle = () => {
+    const isOpen = heroPhoto.classList.toggle("is-open");
+    heroPhoto.setAttribute("aria-expanded", String(isOpen));
+  };
+  heroPhoto.addEventListener("click", toggle);
+  heroPhoto.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggle();
+    }
+  });
+}
+
+function initScrollTopButton() {
+  const btn = document.getElementById("scrollTopBtn");
+  const toggleVisibility = () => {
+    btn.classList.toggle("visible", window.scrollY > 480);
+  };
+  window.addEventListener("scroll", toggleVisibility, { passive: true });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  toggleVisibility();
+}
+
 function initActiveSection() {
   const ids = [...new Set(
     Array.from(document.querySelectorAll(".nav-link[data-nav]")).map((l) => l.dataset.nav)
   )];
 
+  let currentActive = null;
+
   function setActive(id) {
+    if (id === currentActive) return;
+    currentActive = id;
+
     document.querySelectorAll(".nav-link[data-nav]").forEach((link) => {
       link.classList.toggle("active", link.dataset.nav === id);
     });
+
+    history.replaceState(null, "", `#${id}`);
   }
 
   function onScroll() {
@@ -163,4 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSkills();
   initNavToggle();
   initActiveSection();
+  initHeroPhotoToggle();
+  initScrollTopButton();
 });

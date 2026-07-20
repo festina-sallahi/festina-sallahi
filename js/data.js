@@ -40,7 +40,7 @@ const JOURNEY = [
     icon: "code",
     title: "Built 3 Independent Technical Projects",
     org: "Developer tools & test automation",
-    text: "Angular review dashboard, an AI code reviewer (CLI), and a Playwright automation suite.",
+    text: "Went beyond coursework to independently design, build, and test three tools end to end — turning self-directed learning into shipped software (see Projects below).",
     badge: null,
   },
   {
@@ -68,18 +68,22 @@ const PROJECTS = [
     icon: "robot",
     image: "assets/screenshots/ai-code-reviewer.png",
     description:
-      "CLI tool that reviews a git diff using the Claude API and reports structured findings (file, line, severity) behind a swappable model-provider interface, validated against a demo branch with a planted bug.",
+      "CLI tool that reviews a git diff using the Claude API and reports structured findings (file, line, severity) behind a swappable model-provider interface, validated against a demo branch with a planted bug. Backed by a 7-test Vitest suite.",
     tags: ["Node.js", "TypeScript", "Claude API"],
     link: "https://github.com/festina-sallahi/ai-code-reviewer",
+    ciBadge: "https://github.com/festina-sallahi/ai-code-reviewer/actions/workflows/test.yml/badge.svg",
+    ciLink: "https://github.com/festina-sallahi/ai-code-reviewer/actions/workflows/test.yml",
   },
   {
     title: "QA Test Automation",
     icon: "check",
     image: "assets/screenshots/qa-automation-report.png",
     description:
-      "End-to-end Playwright suite using the Page Object Model, covering login, cart, and checkout across 11 scenarios, running cross-browser (Chromium, Firefox, WebKit) via GitHub Actions on every push.",
+      "End-to-end Playwright suite using the Page Object Model, covering login, cart, and checkout across 12 scenarios, running cross-browser (Chromium, Firefox, WebKit) via GitHub Actions on every push.",
     tags: ["Playwright", "JavaScript", "CI/CD"],
     link: "https://github.com/festina-sallahi/qa-test-automation",
+    ciBadge: "https://github.com/festina-sallahi/qa-test-automation/actions/workflows/playwright.yml/badge.svg",
+    ciLink: "https://github.com/festina-sallahi/qa-test-automation/actions/workflows/playwright.yml",
   },
 ];
 
@@ -88,9 +92,10 @@ const COLLABORATIONS = [
     title: "MyFamHistory",
     logo: "assets/logos/myfamhistory-icon.svg",
     image: "assets/screenshots/myfamhistory.png",
+    live: true,
     description:
-      "Contributed to the application's structure and logic, and led the UI/UX design for this family tree and genealogy platform.",
-    tags: ["UI/UX", "Angular", "Node.js", "Structure & Logic"],
+      "Partnered on a genealogy platform's Angular front end and NestJS backend, and led the UI/UX design end-to-end — from layout to the component system.",
+    tags: ["Angular", "NestJS", "Node.js"],
     link: "https://myfamhistory.com",
   },
 ];
@@ -104,12 +109,18 @@ const SKILL_GROUPS = [
       { name: "TypeScript" },
       { name: "Python" },
       { name: "Java" },
+      { name: "XML" },
     ],
   },
   {
-    title: "Frontend",
+    title: "Frontend & Testing",
     icon: "monitor",
-    skills: [{ name: "Angular" }, { name: "HTML5" }, { name: "CSS3" }],
+    skills: [
+      { name: "Angular" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Playwright" },
+    ],
   },
   {
     title: "Backend & APIs",
@@ -119,26 +130,16 @@ const SKILL_GROUPS = [
   {
     title: "Tools & Platforms",
     icon: "wrench",
-    skills: [{ name: "Git / GitHub" }, { name: "Jira" }, { name: "Confluence" }],
-  },
-  {
-    title: "Design & Prototyping",
-    icon: "pencil",
-    skills: [{ name: "Figma" }],
+    skills: [
+      { name: "Git / GitHub" },
+      { name: "Jira" },
+      { name: "Confluence" },
+      { name: "Figma" },
+    ],
   },
   {
     title: "CMS & E-Commerce",
     icon: "cart",
     skills: [{ name: "WordPress" }, { name: "Shopware 6" }, { name: "Sanity Studio" }],
-  },
-  {
-    title: "Testing & Automation",
-    icon: "check-circle",
-    skills: [{ name: "Playwright" }],
-  },
-  {
-    title: "Markup & Data",
-    icon: "doc",
-    skills: [{ name: "XML" }],
   },
 ];

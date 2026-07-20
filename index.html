@@ -27,6 +27,7 @@
         <a href="#about" class="nav-link active" data-nav="about">About</a>
         <a href="#journey" class="nav-link" data-nav="journey">Journey</a>
         <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
+        <a href="#collaboration" class="nav-link" data-nav="collaboration">Collaboration</a>
         <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
         <div class="icon-link-group">
           <a href="https://github.com/festina-sallahi" class="icon-link" target="_blank" rel="noopener" aria-label="GitHub">
@@ -45,6 +46,7 @@
     <a href="#about" class="nav-link active" data-nav="about">About</a>
     <a href="#journey" class="nav-link" data-nav="journey">Journey</a>
     <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
+    <a href="#collaboration" class="nav-link" data-nav="collaboration">Collaboration</a>
     <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
   </nav>
 
@@ -55,6 +57,7 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <h1>Hi, I'm Festina.<br>I build software and<br>automate <span class="accent">quality.</span></h1>
+
           <p class="lede">
             I enjoy turning complex problems into clean, reliable solutions. My path started in
             data and content, and led me to where I am today: building developer tools and test
@@ -69,10 +72,6 @@
             <li>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
               <a href="mailto:festina.sallahi1@gmail.com">festina.sallahi1@gmail.com</a>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
-              Open to opportunities from 04/2026
             </li>
           </ul>
 
@@ -90,7 +89,7 @@
         </div>
 
         <div class="hero-media">
-          <div class="hero-photo">
+          <div class="hero-photo" id="heroPhoto" tabindex="0" role="button" aria-expanded="false" aria-label="Show more about Festina">
             <img src="assets/Festina.png" alt="Portrait of Festina Sallahi" />
             <div class="hero-photo-overlay">
               <div class="hero-photo-quote-block">
@@ -237,6 +236,10 @@
       </a>
     </div>
   </footer>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
