@@ -25,7 +25,7 @@ const STATIC_I18N = {
 
     beyond_title: "Beyond code",
     beyond_text:
-      "I'm a learning mentor (2024–2026), volunteering to tutor students with migrant backgrounds in German. Teaching and learning together is something I truly enjoy.",
+      "I'm a learning mentor (2024–heute), volunteering to tutor students with migrant backgrounds in learning German. Teaching and learning together is something I truly enjoy.",
 
     journey_heading: "My Journey",
     journey_sub: "Key milestones that shaped my path into software engineering.",
@@ -36,7 +36,7 @@ const STATIC_I18N = {
     projects_view_all: "View all on GitHub →",
 
     collaboration_heading: "Collaboration",
-    collaboration_sub: "A project I've contributed to alongside its owner.",
+    collaboration_sub: "Projects I've worked on as part of a team.",
     live_product: "Live product",
 
     skills_heading: "Skills & Tools",
@@ -72,7 +72,7 @@ const STATIC_I18N = {
 
     beyond_title: "Abseits von Code",
     beyond_text:
-      "Ich bin ehrenamtliche Lernpatin (2024–2026) und unterstütze Schüler:innen mit Migrationshintergrund in Deutsch und Mathematik. Gemeinsames Lehren und Lernen bereitet mir große Freude.",
+      "Ich bin ehrenamtliche Lernpatin (2024–now) und unterstütze Schüler:innen mit Migrationshintergrund beim Deutschlernen. Gemeinsames Lernen bereitet mir große Freude.",
 
     journey_heading: "Mein Werdegang",
     journey_sub: "Wichtige Meilensteine auf meinem Weg in die Softwareentwicklung.",
@@ -83,7 +83,7 @@ const STATIC_I18N = {
     projects_view_all: "Alle auf GitHub ansehen →",
 
     collaboration_heading: "Kooperation",
-    collaboration_sub: "Ein Projekt, zu dem ich gemeinsam mit dem Inhaber beigetragen habe.",
+    collaboration_sub: "Projekte, an denen ich im Team mitgewirkt habe.",
     live_product: "Live-Produkt",
 
     skills_heading: "Fähigkeiten & Tools",
