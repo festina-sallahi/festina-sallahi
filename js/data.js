@@ -11,8 +11,8 @@ const JOURNEY = [
     title: { en: "B.Sc. Business Information Systems", de: "B.Sc. Wirtschaftsinformatik" },
     org: "University of Passau",
     text: {
-      en: "Started a business information systems degree, combining business processes, systems analysis, and software development.",
-      de: "Begann ein Studium der Wirtschaftsinformatik, das Geschäftsprozesse, Systemanalyse und Softwareentwicklung miteinander verbindet.",
+      en: "Studied Business Information Systems with a focus on the intersection of business processes, systems analysis, and software development.",
+      de: "Studium der Wirtschaftsinformatik mit Fokus auf die Verbindung von Geschäftsprozessen, Systemanalyse und Softwareentwicklung.",
     },
     badge: {
       en: "Software Engineering Project — Grade: 1.0 (highest possible)",
@@ -25,8 +25,8 @@ const JOURNEY = [
     title: { en: "Working Student – Data Management", de: "Werkstudentin – Datenmanagement" },
     org: "xeomed GmbH & Co. KG",
     text: {
-      en: "Cleansed and quality-checked CRM data, and planned structured functional/content testing ahead of product launches.",
-      de: "Bereinigte und prüfte CRM-Daten und plante strukturierte funktionale Tests sowie Content-Tests vor Produkteinführungen.",
+      en:"Improved CRM data quality and performed structured functional and content testing to support product relaunches.",
+      de:"Verbesserte die CRM-Datenqualität und führte strukturierte Funktions- und Content-Tests zur Unterstützung Produkt-Relaunches durch.",
     },
     badge: null,
   },
@@ -36,8 +36,8 @@ const JOURNEY = [
     title: { en: "Working Student – Content Management", de: "Werkstudentin – Content-Management" },
     org: "Experience One AG · Mercedes-Benz Vans VMK",
     text: {
-      en: "Managed and structured digital content, vehicle equipment data, and image assets for the Mercedes-Benz Vans website.",
-      de: "Verwaltete und strukturierte digitale Inhalte, Fahrzeugausstattungsdaten und Bildmaterial für die Mercedes-Benz-Vans-Website.",
+      en: "Managed and structured digital content, vehicle equipment data, and media assets for the Mercedes-Benz Vans website.",
+      de: "Verwaltete und strukturierte digitale Inhalte, Fahrzeugausstattungsdaten sowie Medieninhalte für die Mercedes-Benz Vans Website.",
     },
     badge: null,
   },
@@ -47,8 +47,8 @@ const JOURNEY = [
     title: { en: "Working Student – Digital Products", de: "Werkstudentin – Digitale Produkte" },
     org: "Walhalla Mediengruppe",
     text: {
-      en: "Supported a Shopware 6 migration and rollout, and maintained digital publications, reporting, and CRM data quality.",
-      de: "Unterstützte eine Shopware-6-Migration und deren Rollout und pflegte digitale Publikationen, Reportings und die CRM-Datenqualität.",
+      en: "Supported a Shopware 6 migration and rollout, created and maintained digital ebooks, and ensured data quality across publications, reporting, and CRM processes.",
+      de: "Unterstützte die Shopware-6-Migration und den Rollout, erstellte und pflegte digitale E-Books und stellte die Datenqualität in Publikationen, Reportings und CRM-Prozessen sicher.",
     },
     badge: null,
   },
@@ -58,22 +58,22 @@ const JOURNEY = [
     title: { en: "Built 3 Independent Technical Projects", de: "3 eigenständige technische Projekte umgesetzt" },
     org: { en: "Developer tools & test automation", de: "Entwicklertools & Testautomatisierung" },
     text: {
-      en: "Went beyond coursework to independently design, build, and test three tools end to end — turning self-directed learning into shipped software (see Projects below).",
-      de: "Ging über das Studium hinaus und konzipierte, entwickelte und testete drei Tools eigenständig von Anfang bis Ende — aus selbstgesteuertem Lernen wurde einsatzbereite Software (siehe Projekte unten).",
+      en:"Independently designed, built, and tested three technical tools end-to-end, transforming self-directed learning into practical software solutions.",
+      de:"Entwickelte eigenständig drei technische Tools von der Konzeption bis zum Test und setzte selbstgesteuertes Lernen in praxisnahe Softwarelösungen um.",
     },
     badge: null,
   },
   {
     date: "02/2026",
     icon: "rocket",
-    title: { en: "B.Sc. Completing – Ready for What's Next", de: "B.Sc.-Abschluss – bereit für den nächsten Schritt" },
+    title: { en: "B.Sc. Business Information Systems Completed", de: "B.Sc. Wirtschaftsinformatik abgeschlossen" },
     org: {
-      en: "Applying for Software Engineering / QA Automation roles",
-      de: "Bewirbt sich auf Software-Engineering- / QA-Automatisierungs-Rollen",
+      en: "Seeking Software Engineering / QA Automation opportunities",
+      de: "Auf der Suche nach Positionen im Bereich Software Engineering und QA-Automatisierung",
     },
     text: {
-      en: "Completed my degree in 02/2026 and now looking to contribute to impactful engineering teams.",
-      de: "Schließe mein Studium im 04/2026 ab und freue mich darauf, wirkungsvolle Engineering-Teams zu unterstützen.",
+      en:"Completed my degree in February 2026 and am ready to contribute my software engineering and testing skills to innovative engineering teams.",
+      de:"Ich habe mein Studium im Februar 2026 abgeschlossen und möchte meine Kenntnisse in Softwareentwicklung und Testing in innovativen Engineering-Teams einbringen.",
     },
     badge: null,
   },
@@ -85,8 +85,8 @@ const PROJECTS = [
     icon: "angular",
     image: "assets/screenshots/review-dashboard.png",
     description: {
-      en: "Angular dashboard for reviewing pull requests: PR list, findings detail, activity feed, and integrations screens — built around a swappable data-provider interface, with 28 unit tests and a mobile-responsive layout.",
-      de: "Angular-Dashboard zur Überprüfung von Pull Requests: PR-Liste, Detailansicht der Findings, Aktivitäts-Feed und Integrationsseiten — aufgebaut um eine austauschbare Datenanbieter-Schnittstelle, mit 28 Unit-Tests und einem mobil-responsiven Layout.",
+      en:"Angular dashboard for reviewing pull requests with PR lists, findings details, activity feeds, and integration views. Built with a flexible data-provider architecture, 28 unit tests, and a responsive layout.",
+      de:"Angular-Dashboard zur Überprüfung von Pull Requests mit PR-Listen, Findings-Details, Aktivitäts-Feed und Integrationsansichten. Entwickelt mit einer flexiblen Datenanbieter-Architektur, 28 Unit-Tests und einem responsiven Layout.",
     },
     tags: ["Angular", "TypeScript", "RxJS"],
     link: "https://github.com/festina-sallahi/review-dashboard",
@@ -96,8 +96,8 @@ const PROJECTS = [
     icon: "robot",
     image: "assets/screenshots/ai-code-reviewer.png",
     description: {
-      en: "CLI tool that reviews a git diff using the Claude API and reports structured findings (file, line, severity) behind a swappable model-provider interface, validated against a demo branch with a planted bug. Backed by a 7-test Vitest suite.",
-      de: "CLI-Tool, das einen Git-Diff mithilfe der Claude-API überprüft und strukturierte Findings (Datei, Zeile, Schweregrad) meldet — hinter einer austauschbaren Modellanbieter-Schnittstelle, validiert an einem Demo-Branch mit einem eingebauten Bug. Abgesichert durch eine Vitest-Suite mit 7 Tests.",
+      en:"CLI tool that analyzes Git diffs using the Claude API and generates structured code review findings (file, line, severity). Built with a modular model-provider architecture and validated with automated tests.",
+      de:"CLI-Tool zur Analyse von Git-Diffs mit der Claude API, das strukturierte Code-Review-Ergebnisse (Datei, Zeile, Schweregrad) erzeugt. Entwickelt mit einer modularen Modellanbieter-Architektur und durch automatisierte Tests validiert.",
     },
     tags: ["Node.js", "TypeScript", "Claude API"],
     link: "https://github.com/festina-sallahi/ai-code-reviewer",
@@ -109,8 +109,8 @@ const PROJECTS = [
     icon: "check",
     image: "assets/screenshots/qa-automation-report.png",
     description: {
-      en: "End-to-end Playwright suite using the Page Object Model, covering login, cart, and checkout across 12 scenarios, running cross-browser (Chromium, Firefox, WebKit) via GitHub Actions on every push.",
-      de: "End-to-End-Playwright-Suite nach dem Page-Object-Model, die Login, Warenkorb und Checkout in 12 Szenarien abdeckt und bei jedem Push browserübergreifend (Chromium, Firefox, WebKit) über GitHub Actions läuft.",
+      en:"End-to-end Playwright test suite using the Page Object Model, covering login, cart, and checkout flows across 12 scenarios. Runs cross-browser (Chromium, Firefox, WebKit) through GitHub Actions on every push.",
+      de:"End-to-End-Playwright-Testsuite nach dem Page-Object-Model, die Login-, Warenkorb- und Checkout-Prozesse in 12 Szenarien abdeckt. Führt browserübergreifende Tests (Chromium, Firefox, WebKit) über GitHub Actions bei jedem Push aus.",
     },
     tags: ["Playwright", "JavaScript", "CI/CD"],
     link: "https://github.com/festina-sallahi/qa-test-automation",
@@ -126,8 +126,8 @@ const COLLABORATIONS = [
     image: "assets/screenshots/myfamhistory.png",
     live: true,
     description: {
-      en: "Partnered on a genealogy platform's Angular front end and NestJS backend, and led the UI/UX design end-to-end — from layout to the component system.",
-      de: "Arbeitete am Angular-Frontend und NestJS-Backend einer Genealogie-Plattform mit und verantwortete das UI/UX-Design von Anfang bis Ende — vom Layout bis zum Komponentensystem.",
+      en:"Contributed to the Angular frontend and NestJS backend of a genealogy platform, while leading the UI/UX design end-to-end — from layouts to the component system.",
+      de:"Entwickelte am Angular-Frontend und NestJS-Backend einer Genealogie-Plattform mit und verantwortete das UI/UX-Design von der Konzeption bis zum Komponentensystem.",
     },
     tags: ["Angular", "NestJS", "Node.js"],
     link: "https://myfamhistory.com",
@@ -138,10 +138,10 @@ const COLLABORATIONS = [
     image: "assets/screenshots/zeitmanagementsystem.png",
     live: false,
     description: {
-      en: "Team project (6 members) at the University of Passau: a Flask web application for digital time tracking, built from a formal requirements specification with a role-based rights concept for employees, clients, and administration. Led UI/UX design and implemented the navigation bar, home page, and detailed time-entry overviews by client and by employee.",
-      de: "Teamprojekt (6 Personen) an der Universität Passau: eine Flask-Webanwendung zur digitalen Zeiterfassung, umgesetzt nach einem formalen Pflichtenheft mit rollenbasiertem Rechtekonzept für Mitarbeiter, Klienten und Verwaltung. Verantwortete das UI/UX-Design und implementierte Menüleiste, Startseite sowie die Detailübersichten der Zeiteinträge nach Klient und Mitarbeiter.",
+      en: "University team project (6 members): a Flask web application for digital time tracking, developed from a formal requirements specification with role-based access control. Implemented the navigation bar, home page, and detailed time-entry views by customer and employee, while contributing to UI/UX decisions.",
+      de: "Teamprojekt (6 Personen) an der Universität Passau: eine Flask-Webanwendung zur digitalen Zeiterfassung, entwickelt auf Basis eines Pflichtenhefts mit rollenbasiertem Rechtekonzept. Implementierte die Menüleiste, Startseite und detaillierte Zeiterfassungsansichtennach Kunde und Mitarbeiter und wirkte an UI/UX-Entscheidungen mit.",
     },
-    tags: ["Python", "Flask", "UI/UX"],
+    tags: ["Python", "Flask", "UI/UX", "Requirements Engineering"],
     link: "https://github.com/Wirtschaftsinformatik-Passau/softwareprojekt-gruppe-6-1",
   },
 ];
@@ -163,15 +163,16 @@ const SKILL_GROUPS = [
     icon: "monitor",
     skills: [
       { name: "Angular" },
+      { name: "Playwright" },
       { name: "HTML5" },
       { name: "CSS3" },
-      { name: "Playwright" },
     ],
   },
   {
     title: { en: "Backend & APIs", de: "Backend & APIs" },
     icon: "server",
-    skills: [{ name: "REST APIs" }, { name: "Node.js" }, { name: "SAP ABAP" }],
+    skills: [{ name: "Node.js" }, { name: "REST APIs" }, { name: "NestJS" },{ name: "SAP ABAP" }],
+
   },
   {
     title: { en: "Tools & Platforms", de: "Tools & Plattformen" },
