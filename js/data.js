@@ -134,8 +134,8 @@ const COLLABORATIONS = [
   },
    {
     title: "Clockin – Time Tracking System",
-    logo: "assets/logos/zeitmanagementsystem-icon.svg",
-    image: "assets/screenshots/LoginSeite.png",
+    logo: "assets/logos/timetrackingsystem-icon.svg",
+    image: "assets/screenshots/timetrackingsystem.png",
     live: false,
     description: {
       en: "University team project (6 members): a Flask web application for digital time tracking, developed from a formal requirements specification with role-based access control. Implemented the navigation bar, home page, and detailed time-entry views by customer and employee, while contributing to UI/UX decisions.",
