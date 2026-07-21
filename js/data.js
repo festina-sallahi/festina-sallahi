@@ -64,7 +64,7 @@ const JOURNEY = [
     badge: null,
   },
   {
-    date: "04/2026",
+    date: "02/2026",
     icon: "rocket",
     title: { en: "B.Sc. Completing – Ready for What's Next", de: "B.Sc.-Abschluss – bereit für den nächsten Schritt" },
     org: {
@@ -72,7 +72,7 @@ const JOURNEY = [
       de: "Bewirbt sich auf Software-Engineering- / QA-Automatisierungs-Rollen",
     },
     text: {
-      en: "Completing my degree in 04/2026 and excited to contribute to impactful engineering teams.",
+      en: "Completed my degree in 02/2026 and now looking to contribute to impactful engineering teams.",
       de: "Schließe mein Studium im 04/2026 ab und freue mich darauf, wirkungsvolle Engineering-Teams zu unterstützen.",
     },
     badge: null,
@@ -131,6 +131,18 @@ const COLLABORATIONS = [
     },
     tags: ["Angular", "NestJS", "Node.js"],
     link: "https://myfamhistory.com",
+  },
+   {
+    title: "Clockin – Time Tracking System",
+    logo: "assets/logos/zeitmanagementsystem-icon.svg",
+    image: "assets/screenshots/zeitmanagementsystem.png",
+    live: false,
+    description: {
+      en: "Team project (6 members) at the University of Passau: a Flask web application for digital time tracking, built from a formal requirements specification with a role-based rights concept for employees, clients, and administration. Led UI/UX design and implemented the navigation bar, home page, and detailed time-entry overviews by client and by employee.",
+      de: "Teamprojekt (6 Personen) an der Universität Passau: eine Flask-Webanwendung zur digitalen Zeiterfassung, umgesetzt nach einem formalen Pflichtenheft mit rollenbasiertem Rechtekonzept für Mitarbeiter, Klienten und Verwaltung. Verantwortete das UI/UX-Design und implementierte Menüleiste, Startseite sowie die Detailübersichten der Zeiteinträge nach Klient und Mitarbeiter.",
+    },
+    tags: ["Python", "Flask", "UI/UX"],
+    link: "https://github.com/Wirtschaftsinformatik-Passau/softwareprojekt-gruppe-6-1",
   },
 ];
 
