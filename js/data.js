@@ -134,7 +134,7 @@ const COLLABORATIONS = [
   },
    {
     title: "Clockin – Time Tracking System",
-    logo: "assets/logos/timetrackingsystem-icon.svg",
+    logo: "assets/logos/timetrackingsystem-icon.png",
     image: "assets/screenshots/timetrackingsystem.png",
     live: false,
     description: {
