@@ -64,7 +64,7 @@ const JOURNEY = [
     badge: null,
   },
   {
-    date: "02/2026",
+    date: "03/2026",
     icon: "rocket",
     title: { en: "B.Sc. Business Information Systems Completed", de: "B.Sc. Wirtschaftsinformatik abgeschlossen" },
     org: {
@@ -72,8 +72,8 @@ const JOURNEY = [
       de: "Auf der Suche nach Positionen im Bereich Software Engineering und QA-Automatisierung",
     },
     text: {
-      en:"Completed my degree in February 2026 and am ready to contribute my software engineering and testing skills to innovative engineering teams.",
-      de:"Ich habe mein Studium im Februar 2026 abgeschlossen und möchte meine Kenntnisse in Softwareentwicklung und Testing in innovativen Engineering-Teams einbringen.",
+      en:"Completed my degree in March 2026 and am ready to contribute my software engineering and testing skills to innovative engineering teams.",
+      de:"Ich habe mein Studium im März 2026 abgeschlossen und möchte meine Kenntnisse in Softwareentwicklung und Testing in innovativen Engineering-Teams einbringen.",
     },
     badge: null,
   },
